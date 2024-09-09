@@ -10,11 +10,12 @@
         <meta property="og:title" content="Vecna Eve of Ruin - Home" />
         <meta property="og:description" content="Vecna - Vecna Eve of Ruin - Home" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="vecna-eve-of-ruin-home.html" />
+        <meta property="og:url" content="https://flame-of-faerun.com/vecna-eve-of-ruin-home.html" />
         <meta property="og:image" content="undefined" />
         <meta property="og:site_name" content="Vecna" />
-        <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="lib/rss.xml" />
+        <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://flame-of-faerun.com/lib/rss.xml" />
         <script async="" id="webpage-script" src="lib/scripts/webpage.js" onload='this.onload=null;this.setAttribute("loaded", "true")'></script>
+        <script async="" id="minisearch-script" src="https://cdn.jsdelivr.net/npm/minisearch@6.3.0/dist/umd/index.min.js" onload='this.onload=null;this.setAttribute("loaded", "true")'></script>
         <link rel="icon" href="lib/media/favicon.png" />
         <style>
             body {
@@ -325,7 +326,12 @@
             <div class="sidebar-left sidebar">
                 <div class="sidebar-handle"></div>
                 <div class="sidebar-topbar">
-                    <div class="topbar-content"></div>
+                    <div class="topbar-content">
+                        <label class="theme-toggle-container" for="theme_toggle">
+                            <input class="theme-toggle-input" type="checkbox" id="theme_toggle" />
+                            <div class="toggle-background"></div>
+                        </label>
+                    </div>
                     <div class="clickable-icon sidebar-collapse-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
                             <path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path>
@@ -336,7 +342,13 @@
                         </svg>
                     </div>
                 </div>
-                <div class="sidebar-content"></div>
+                <div class="sidebar-content">
+                    <div class="search-input-container">
+                        <input enterkeyhint="search" type="search" spellcheck="false" placeholder="Search..." />
+                        <div class="search-input-clear-button" aria-label="Clear search"></div>
+                    </div>
+                    <include src="lib/html/file-tree.html"></include>
+                </div>
                 <script defer="">
                     let ls = document.querySelector(".sidebar-left");
                     ls.classList.add("is-collapsed");
@@ -443,7 +455,11 @@
                                     </h3>
                                     <div class="heading-children">
                                         <div>
-                                            <p dir="auto"><a data-href="Session Notes" href="session-notes/session-notes.html" class="internal-link" target="_self" rel="noopener">Session Notes</a></p>
+                                            <p dir="auto">
+                                                <a data-href="Session Notes" href="session-notes/session-notes.html" class="internal-link" target="_self" rel="noopener">Session Notes</a><br />
+                                                <a data-href="Important NPCs" href="npcs/important-npcs.html" class="internal-link" target="_self" rel="noopener">Important NPCs</a><br />
+                                                <a data-href="The Flame of Faerun" href="flame-of-faerun/the-flame-of-faerun.html" class="internal-link" target="_self" rel="noopener">The Flame of Faerun</a>
+                                            </p>
                                         </div>
                                         <div class="mod-footer"></div>
                                     </div>
@@ -467,7 +483,63 @@
                         </svg>
                     </div>
                 </div>
-                <div class="sidebar-content"></div>
+                <div class="sidebar-content">
+                    <div class="tree-container mod-root nav-folder tree-item outline-tree" data-depth="0">
+                        <div class="tree-header">
+                            <span class="sidebar-section-header">Table Of Contents</span>
+                            <button class="clickable-icon collapse-tree-button" aria-label="Collapse All">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg>
+                            </button>
+                        </div>
+                        <div class="tree-scroll-area tree-item-children nav-folder-children">
+                            <div class="tree-item mod-tree-folder nav-folder mod-collapsible is-collapsed" style="display: none;"></div>
+                            <div class="tree-item" data-depth="1">
+                                <a class="tree-link" href="vecna-eve-of-ruin-home.html#Vecna Eve of Ruin - Home">
+                                    <div class="tree-item-contents heading-link" heading-name="Vecna Eve of Ruin - Home"><span class="tree-item-title">Vecna Eve of Ruin - Home</span></div>
+                                </a>
+                                <div class="tree-item-children nav-folder-children">
+                                    <div class="tree-item mod-collapsible" data-depth="2">
+                                        <a class="tree-link" href="vecna-eve-of-ruin-home.html#Existence_in_Peril">
+                                            <div class="tree-item-contents heading-link" heading-name="Existence in Peril">
+                                                <div class="collapse-icon">
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="24"
+                                                        height="24"
+                                                        viewBox="0 0 24 24"
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        stroke-width="2"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        class="svg-icon right-triangle"
+                                                    >
+                                                        <path d="M3 8L12 17L21 8"></path>
+                                                    </svg>
+                                                </div>
+                                                <span class="tree-item-title">Existence in Peril</span>
+                                            </div>
+                                        </a>
+                                        <div class="tree-item-children nav-folder-children">
+                                            <div class="tree-item" data-depth="3">
+                                                <a class="tree-link" href="vecna-eve-of-ruin-home.html#The_Ritual_of_Remaking">
+                                                    <div class="tree-item-contents heading-link" heading-name="The Ritual of Remaking"><span class="tree-item-title">The Ritual of Remaking</span></div>
+                                                </a>
+                                                <div class="tree-item-children nav-folder-children"></div>
+                                            </div>
+                                            <div class="tree-item" data-depth="3">
+                                                <a class="tree-link" href="vecna-eve-of-ruin-home.html#Resources">
+                                                    <div class="tree-item-contents heading-link" heading-name="Resources"><span class="tree-item-title">Resources</span></div>
+                                                </a>
+                                                <div class="tree-item-children nav-folder-children"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <script defer="">
                     let rs = document.querySelector(".sidebar-right");
                     rs.classList.add("is-collapsed");
